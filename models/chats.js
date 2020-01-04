@@ -1,8 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Chat = sequelize.define("Chat", {
-    username: DataTypes.STRING,
-    message: DataTypes.STRING,
-    time: DataTypes.DATE
+    message: DataTypes.STRING
   });
   Chat.associate = function (models) {
     // Associating Band with Songs
