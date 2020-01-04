@@ -4,6 +4,12 @@ module.exports = function(sequelize, DataTypes) {
     message: DataTypes.STRING,
     time: DataTypes.DATE
   });
-
+  Chat.associate = function (models) {
+    // Associating Band with Songs
+    // When an Band is deleted, also delete any associated Songs
+    Chat.belongsTo(models.Users, {
+      onDelete: "cascade"
+    });
+  };
   return Chat;
 };
