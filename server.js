@@ -18,8 +18,7 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 app.use(express.static("public"));
-app.use(require("./controllers/chats_controller"));
-app.use(require("./"))``;
+app.use(require("./controller/chats_controller"));
 
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
