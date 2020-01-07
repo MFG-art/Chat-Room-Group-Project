@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(62, 95, 62);
+  }
+  
+  
+  .container{
+   
+    margin-top: 70px;
+    background-color: white;
+    height: 500px;
+    padding-right: 0;
+    box-shadow: 30px 50px 5px;
+  
+  }
+  
+  
+  .signupform {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    padding: 70px;
+    float: left;
+    font-family: 'Domine', serif;
+    
+  }
+  
+  input{
+    border-style: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  
+    
+  }
+  .plants{
+    height: 500px;
+    width: 500px;
+    float: right;
+  }
+  
+  .btn {
+    background-color: rgb(62, 95, 62);
+    color: white;
+    border-radius: 0%;
+  }
+  
+  h1{
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+    
+  }
+  
+  .form-control{
+    border-radius: 0%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  
+  }
+  
+  h3{
+    margin-bottom: 20px;
+  }
