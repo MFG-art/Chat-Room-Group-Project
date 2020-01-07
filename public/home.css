@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the navbar */
+
+.topnav {
+    overflow: hidden;
+    background-color: #ccccff;
+}
+
+
+/* Navbar links */
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Navbar links on mouse-over */
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    display: flex;
+}
+
+
+/* Active/current link */
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+
+/* the login containers location                */
+
+.topnav .login-container {
+    float: right;
+}
+
+
+/* Styling for  input field inside the navbar */
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 150px;
+    /* the nav bars size */
+}
+
+
+/*styling for the input*/
+
+.topnav .login-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+    background: #ccc;
+}
+
+body {
+    background-color: #00cc66;
+}
+
+.background {
+    border: 2px lightgreen;
+    padding: 25px;
+    background: url(https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?cs=srgb&dl=photo-of-green-field-near-mountains-974314.jpg&fm=jpg);
+    background-repeat: no-repeat;
+    max-width: 300px;
+    float: right;
+    text-align: center;
+}
+
+footer {
+    background-color: #ccccff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 17px;
+}
+
+.sign {
+    background-color: tan;
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 90px;
+    height: 80px;
+    cursor: pointer;
+    margin: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
