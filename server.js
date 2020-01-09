@@ -17,7 +17,7 @@ app.engine(
   })
 );
 app.set("view engine", "handlebars");
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 app.use(require("./controller/html-routes"));
 
 db.sequelize.sync().then(function() {

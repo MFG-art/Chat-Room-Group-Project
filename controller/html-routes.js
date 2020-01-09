@@ -1,12 +1,14 @@
 var router = require("express").Router();
-// router.get("/", function(req, res) {
-//   res.sendfile("./public/home.html");
-// });
-// router.get("/signup", function(req, res) {
-//   res.sendfile("./public/signuppage.html");
-// });
-var chats = require("../models/chats");
-var users = require("../models/users");
+var path = require("path");
+var db = require("../models");
+
+router.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/home.html"));
+});
+router.get("/signup", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/signuppage.html"));
+});
+
 
 router.put("/user/useraccount/:email", function(req, res) {
   var newUser = {
@@ -63,27 +65,11 @@ router.get("/users/all", function(req, res) {
   });
 });
 
-router.get("/", function(req, res) {
-  chats.all(function(data) {
-    res.render("index", {
-      chats: data
-    });
+router.post("/api/signup", function(req, res) {
+  console.log(req.body);
+  db.Users.create(req.body).then(function(ih) {
+    res.json(ih);
   });
-});
-
-router.post("/user/signup", function(req, res) {
-  user
-    .create({
-      email: db,
-      password: "password",
-      age: 46,
-      name: "Abdul Barre"
-    })
-    .then(function(dbuser) {
-      res.render("user", {
-        user: dbUser
-      });
-    });
 });
 
 router.post("/chats/create", function(req, res) {
