@@ -23,7 +23,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.set("view engine", "handlebars");
 app.use(express.static(__dirname + '/public'));
-app.use(require("./controller/html-routes"));
+app.use(require("./controller/routes"));
 
 
 db.sequelize.sync().then(function() {
