@@ -10,5 +10,13 @@ module.exports = function(sequelize, DataTypes) {
       onDelete: "cascade"
     });
   };
+  Users.prototype.validPassword = function(password) {
+    if(password === this.password){
+      return true;
+    }
+    else{
+      return false;
+    }
+  };
   return Users;
 };

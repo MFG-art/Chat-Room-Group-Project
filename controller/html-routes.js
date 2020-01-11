@@ -1,31 +1,42 @@
 var router = require("express").Router();
 var path = require("path");
 var db = require("../models");
-
+var passport = require("../config/passport");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+// homepage route
 router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/home.html"));
 });
+// sign up page route
 router.get("/signup", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/signuppage.html"));
 });
-
-
-router.put("/user/useraccount/:email", function(req, res) {
-  var newUser = {
-    password: req.body.password,
-    age: req.body.age,
-    name: req.body.name
-  };
-  user
-    .update(newUser, {
-      where: {
-        email: req.params.email
-      }
-    })
-    .then(function(dbUser) {
-      res.json(dbUser);
-    });
+// api routes
+// making a new account sign up.
+router.post("/api/signup", function(req, res) {
+  console.log(req.body);
+  db.Users.create(req.body).then(function(ih) {
+    res.json(ih);
+  });
 });
+// checks if it username and password is right in database
+router.post("/api/login", passport.authenticate("local"), function(req, res) {
+  res.json(req.user);
+});
+// router.get("/signup", isAuthenticated, function(req, res) {
+//   res.sendFile(path.join(__dirname, "../public/signuppage.html"));
+// });
+// router.get("/api/signin/:username", function(req, res) {
+//   var user = req.params.username;
+//   console.log(user);
+//   db.Users.findOne({
+//     where:{
+//       username : user
+//     }
+//   }).then(function(result){
+//     res.json(result);
+//   })
+// });
 
 router.delete("/user/delete/:email", function(req, res) {
   user
@@ -65,12 +76,7 @@ router.get("/users/all", function(req, res) {
   });
 });
 
-router.post("/api/signup", function(req, res) {
-  console.log(req.body);
-  db.Users.create(req.body).then(function(ih) {
-    res.json(ih);
-  });
-});
+
 
 router.post("/chats/create", function(req, res) {
   chats.create(req.body.chats_name, function(data) {
