@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "B@ss&Tr3bl3",
+    "password": null,
     "database": "chats_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "B@ss&Tr3bl3",
+    "password": null,
     "database": "chats_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -17,7 +17,7 @@
   },
   "production": {
     "username": "root",
-    "password": "B@ss&Tr3bl3",
+    "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql",

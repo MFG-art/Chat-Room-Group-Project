@@ -11,6 +11,10 @@ router.get("/", function(req, res) {
 router.get("/signup", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/signuppage.html"));
 });
+// check if login 
+router.get("/chatroom", isAuthenticated, function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/chat.html"));
+});
 // api routes
 // making a new account sign up.
 router.post("/api/signup", function(req, res) {
@@ -23,9 +27,17 @@ router.post("/api/signup", function(req, res) {
 router.post("/api/login", passport.authenticate("local"), function(req, res) {
   res.json(req.user);
 });
-// check if login 
-router.get("/chatroom", isAuthenticated, function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/chat.html"));
+
+router.get("/api/allusers", function(req, res) {
+  db.Users.findAll({}).then(function(data) {
+    
+    var usernames =[];
+    for(i=0; i < data.length; i++){
+      usernames.push(data[i].username)
+    }
+    console.log(usernames);
+    res.json(usernames);
+  });
 });
 
 
@@ -41,23 +53,6 @@ router.delete("/user/delete/:email", function(req, res) {
     });
 });
 
-router.post("/user/signup", function(req, res) {
-  user
-    .findOne({
-      email: req.body.email
-    })
-    .then(function(dbuser) {
-      if (dbUser.password === req.body.password) {
-        res.render("user", {
-          user: dbUser
-        });
-      } else {
-        res.render("user", {
-          user: "invalid credentials"
-        });
-      }
-    });
-});
 
 router.get("/users/all", function(req, res) {
   users.all(function(data) {
