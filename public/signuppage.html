@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/style.css">
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
-  <title>Sign - Up</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sign - Up</title>
+  </head>
 
-<div class="title">
- <h1 style="display: inline;"> GRAIN Reaper. </h1>  <h4 style="display: inline;"> lets gather and share </h4>
-</div>
-<body>
+  <div class="title">
+    <h1 style="display: inline;">GRAIN Reaper.</h1>
+    <h4 style="display: inline;">lets gather and share</h4>
+  </div>
+  <body>
+    <div class="container">
+      <div class="signupform">
+        <form>
+          <h3>Sign Up</h3>
 
+          <div class="form-group">
+            <label for="username">Create Username</label>
+            <input type="text" class="form-control" id="username" />
+          </div>
 
-  
-  
-  <div class="container">
-   
-    
- 
-    <div class="signupform">
-      <form>
-  
-        <h3>Sign Up </h3>
+          <div class="form-group">
+            <label for="createpwd"> Create Password</label>
+            <input type="password" class="form-control" id="createpwd" />
+          </div>
 
-        <div class="form-group">
-          <label for="username">Create Username</label>
-          <input type="text" class="form-control" id="username">
-        </div>
+          <div class="form-group">
+            <label for="confirmpwd">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmpwd" />
+          </div>
 
-        <div class="form-group">
-          <label for="createpwd"> Create Password</label>
-          <input type="password" class="form-control" id="createpwd">
-        </div>
+          <button class="btn">Join</button>
 
-        <div class="form-group">
-          <label for="confirmpwd">Confirm Password</label>
-          <input type="password" class="form-control" id="confirmpwd">
-        </div>
-    
-        <button class="btn"> Join</button>
+          <br />
+          <br />
 
-        <br>
-        <br>
+          <p><a href="home.html">Already have an account?</a></p>
+        </form>
+      </div>
 
-        <p>Already have an account? </p>
-
-      </form>
+      <div class="plants">
+        <img src="./assets/image/greens.jpg" alt="pine needles in hands" />
+      </div>
     </div>
-  
-  <div class="plants">
-    <img src="./assets/image/greens.jpg" alt="pine needles in hands">
-  </div>
- 
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="/assets/js/signup.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/signup.js"></script>
+  </body>
 </html>
