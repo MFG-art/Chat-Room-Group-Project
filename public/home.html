@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap"
+      rel="stylesheet"
+    />
+    <title>Log In</title>
+  </head>
 
-<head>
-<link rel="stylesheet" href="home.css">
-
-</head>
-<body>
-
-
-<div class="topnav">
-  <a class="active" href="#features">messages</a>
-  <a href="#about">chatrooms</a>
-  <a href="#contact">about us</a>
-  <div class="login-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="psw">
-      <button type="submit"><span>sign up </span></button>
-    </form>
+  <div class="title">
+    <h1 style="display: inline;">GRAIN Reaper.</h1>
+    <h4 style="display: inline;">lets gather and share</h4>
   </div>
-</div>
+  <body>
+    <div class="container">
+      <div class="signupform">
+        <form>
+          <h3>Log In</h3>
 
+          <div class="form-group">
+            <label for="username">Enter Username</label>
+            <input type="text" class="form-control" id="username" />
+          </div>
 
+          <div class="form-group">
+            <label for="createpwd"> Enter Password</label>
+            <input type="password" class="form-control" id="createpwd" />
+          </div>
 
-<div class="background">
-to access the <br>content this page <br>has too offer<br> please click <br> the button <br> to sign up.<br> if 
-you already have <br> a <br>account please<br> log in<br>
+          <button class="btn">Login</button>
 
+          <br />
+          <br />
 
-<button class="sign">
-  <a href="signuppage.html">sign up</a>
+          <p><a href="signuppage.html">New to our site?</a></p>
+        </form>
+      </div>
 
-</button>
-</div>
-
-
-  <footer >
-   
-  </footer>
-
-
-</div>
-
-
-anime is life  <br>
-anime is everything <br>
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="/assets/js/home.js"></script>
-</body>
+      <div class="plants">
+        <img src="./assets/image/greens.jpg" alt="pine needles in hands" />
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/home.js"></script>
+  </body>
 </html>
