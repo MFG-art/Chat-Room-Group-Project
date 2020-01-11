@@ -81,11 +81,13 @@ body{
   
   }
   
-  h3{
+  h3{s
     margin-bottom: 22px;
-    color: rgb(62, 95, 62);;
+    color: rgb(62, 95, 62);
   }
 
   p{
     color: rgba(1, 1, 138, 0.925);
   }
+
+ 
