@@ -23,20 +23,11 @@ router.post("/api/signup", function(req, res) {
 router.post("/api/login", passport.authenticate("local"), function(req, res) {
   res.json(req.user);
 });
-// router.get("/signup", isAuthenticated, function(req, res) {
-//   res.sendFile(path.join(__dirname, "../public/signuppage.html"));
-// });
-// router.get("/api/signin/:username", function(req, res) {
-//   var user = req.params.username;
-//   console.log(user);
-//   db.Users.findOne({
-//     where:{
-//       username : user
-//     }
-//   }).then(function(result){
-//     res.json(result);
-//   })
-// });
+// check if login 
+router.get("/chatroom", isAuthenticated, function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/chat.html"));
+});
+
 
 router.delete("/user/delete/:email", function(req, res) {
   user
