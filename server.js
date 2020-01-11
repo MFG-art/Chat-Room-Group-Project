@@ -18,13 +18,14 @@ app.engine(
     defaultLayout: "main"
   })
 );
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 app.set("view engine", "handlebars");
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 app.use(require("./controller/routes"));
-
 
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
