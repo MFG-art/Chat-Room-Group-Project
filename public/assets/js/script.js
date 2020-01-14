@@ -53,6 +53,12 @@ $(document).ready(function() {
     });
   });
 });
+$("#inputMessage").on("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   $(".btn-send").click();
+  }
+});
 
 function refreshDisplay() {
   $("#messages-list").html("");
@@ -77,7 +83,7 @@ function refreshDisplay() {
         <div class="msg-desc">
           ${allChats[i].message}
         </div>
-        <small>${allChats[i].name}</small>
+        <small>${allChats[i].user}</small>
       </div>
       </li>`;
       $("#messages-list").append(leftMessageHTML);
