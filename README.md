@@ -1,4 +1,4 @@
-# The-Boomers
+# Chat Room Group Project
 deploy on heroku (https://the-boomer.herokuapp.com/);
 gihub(https://github.com/MFG-art/The-Boomers.git)
 # Chat room
