@@ -1,7 +1,5 @@
 # The-Boomers
-deploy on heroku (https://the-boomer.herokuapp.com/);
 gihub(https://github.com/MFG-art/The-Boomers.git)
 # Chat room
-have to click on sign up before login
-after login you can see have many people there is on the left.
-on the right you can speak whatever you want to said
+Users must sign up before logging in.
+Users are able to chat with other users as well as view how many users are currently online.
